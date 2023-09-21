@@ -1,0 +1,16 @@
+
+                            <section class="work-section py-3">
+
+                                <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "courses" }}</h3>
+
+                                <div class="item mb-3">
+                                  <div class="item-content">
+                                      <ul class="resume-list">
+                                          {{ range sort .Site.Params.courses.list "year" }}
+                                          <li><b>{{ .year | string }}</b>: <a href="{{ .url }}">{{ .name }}</a></li>
+                                          {{ end }}
+                                      </ul>
+                                  </div>
+                                </div><!--//item-->
+
+                            </section><!--//work-section-->
