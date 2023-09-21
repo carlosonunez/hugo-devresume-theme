@@ -19,6 +19,10 @@ googleAnalytics = "UA-XXXXXXX-Y"
     primaryColor = "#54B689"
     textPrimaryColor = "#292929"
 
+    [params.github]
+      repo = https://github.com/carlosonunez/hugo-devresume-theme
+      version = main
+
 
 
 
