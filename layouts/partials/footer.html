@@ -5,7 +5,7 @@
 {{- $footer = "Ported to Hugo by <a href=\"https://github.com/cowboysmall\" target=\"_blank\">CowboySmall</a>" -}}
 {{- end -}}
 {{- with .Site.Params.github -}}
-{{- $footer = (printf "%s. Resume version <a href=\"%s/tree/%s\">%s</a>" $footer .repo .version .version) -}}
+{{- $footer = (printf "%s. Resume version <a href=\"%s/blame/%s/resumes/%s.yaml\">%s</a>" $footer .repo .version $.Site.Params.persona .version) -}}
 {{- end -}}
         <footer class="footer text-center py-4 d-print-none">
 
