@@ -1,0 +1,16 @@
+
+                            <section class="work-section py-3">
+
+                                <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "other-xp" }}</h3>
+
+                                <div class="item mb-3">
+                                  <div class="item-content">
+                                      <ul class="resume-list">
+                                          {{ range sort .Site.Params.otherExperience.list "year" "desc" -}}
+                                          <li><b>{{ .year | string }}</b>: <u>{{ .employer }}</u> - {{ .item }}</li>
+                                          {{- end }}
+                                      </ul>
+                                  </div>
+                                </div><!--//item-->
+
+                            </section><!--//work-section-->
