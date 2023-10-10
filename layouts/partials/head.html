@@ -14,5 +14,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
     <!-- Theme SCSS -->
     {{ $style := resources.Get "scss/devresume.scss" | resources.ExecuteAsTemplate "scss/devresume.scss" . | toCSS (dict "targetPath" "assets/css/devresume.css") | minify | fingerprint }}
-    <link id="theme-style" rel="stylesheet" href="assets/css/devresume-print.css" media="print">
+    {{ $printStyle := resources.Get "css/devresume-print.css" | toCSS }}
+    <link id="theme-style" rel="stylesheet" href="{{ $printStyle.Permalink }}" media="print">
     <link rel="stylesheet" href="{{ $style.Permalink }}">
